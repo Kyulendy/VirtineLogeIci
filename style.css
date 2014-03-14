@@ -1,0 +1,280 @@
+/* Colors
+Bermuda grey #70849C
+Comet #53616E
+Bleach white #E6E1CE
+Porcelaine #D9D9D9
+Grenadier #C2473F
+Nero #303030
+Mosaic #2C353C
+Scarpa flow #8E8E8F
+*/
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+.center {
+    margin: auto;
+}
+.bold {
+    font-weight: bold;
+}
+.light {
+    font-weight: 300;
+}
+.content {
+    padding: 35px 20px;
+    width: 1020px;
+    margin:auto;
+}
+.section {
+    width: 100%;
+    min-height: 400px;
+    /*background-image:url('./images/header.jpg');*/
+    /*background-repeat:repeat;*/
+    /*background-position:center;*/
+}
+p {
+    color: #303030;
+    line-height: 1.5;
+}
+.clear {
+    clear: both;
+}
+/* TOP SECTION */
+#top-section {
+    background-color: #FFFFFF;
+}
+#drop {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    -webkit-transform:rotate(135deg);
+    z-index: 1;
+    background: #E6E1CE;
+}
+#drop span {
+    display: block;
+    height: 360px;
+    width: 450px;
+    margin: 0 auto;
+    -webkit-transform: rotate(135deg);
+    /*background: url('http://placekitten.com/125/120') no-repeat;*/
+}
+h1 {
+    color: #53616E;
+    font-weight: bold;
+    font-size: 3.6em;
+}
+#subtitle {
+    color: #53616E;
+    font-size: 2.4em;
+    font-weight: 300;
+}
+#logo {
+    position: relative;
+    margin-top: -200px;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    z-index: 99;
+}
+/** Placeholder */
+#buildings {
+    height: 85px;
+    background-color: #53616E;
+    padding: 40px;
+}
+#chevron {
+    position: relative;
+    text-align: center;
+    margin: 35px auto;
+    height: 12px;
+    width: 45px;
+}
+#chevron:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 51%;
+    background: #FFFFFF;
+    -webkit-transform: skew(0deg, 25deg);
+    -moz-transform: skew(0deg, 25deg);
+    -ms-transform: skew(0deg, 25deg);
+    -o-transform: skew(0deg, 25deg);
+    transform: skew(0deg, 25deg);
+}
+#chevron:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background: #FFFFFF;
+    -webkit-transform: skew(0deg, -25deg);
+    -moz-transform: skew(0deg, -25deg);
+    -ms-transform: skew(0deg, -25deg);
+    -o-transform: skew(0deg, -25deg);
+    transform: skew(0deg, -25deg);
+}
+
+/* TAGLINE SECTION */
+#tagline-section {
+    padding: 50px 0;
+    background-color: #E6E1CE;
+    font-weight: 300;
+}
+.tagline {
+    color: #53616E;
+    font-size: 1.5em;
+    line-height: 1.5;
+    text-align: center;
+    margin: 40px 0;
+}
+hr#line {
+    border: 5px solid #C2473F;
+    margin: 25px auto;
+    width: 150px;
+    text-align: center;
+}
+/* POINTS SECTION */
+h3 {
+    font-size: 2.5em;
+    line-height: 1.2;
+    color: #C2473F;
+    font-weight: 300;
+    margin: 15px 0;
+}
+#points-section {
+    background-color: #FFFFFF;
+}
+#points-section p {
+    color: #53616E;
+}
+.point {
+    padding: 30px;
+    clear: both;
+}
+.point > div {
+    float: left;
+    padding: 25px;
+    width: 430px;
+}
+.point-text-right {
+    text-align: left;
+}
+.point-text-right > div > .oval{
+    float: right;
+}
+.point-text-left {
+    text-align: right;
+}
+.point-text-left > div > .oval{
+    float: left;
+}
+.oval {
+    width: 300px;
+    height: 150px;
+    -moz-border-radius: 150px / 75px;
+    -webkit-border-radius: 150px / 75px;
+    border-radius: 150px / 75px;
+}
+#first-oval {
+    background-color: #70849C;
+}
+#second-oval {
+    background-color: #53616E;
+}
+#third-oval {
+    background-color: #C2473F;
+}
+
+/* INVITATION SECTION */
+#invitation-section {
+    background-color: #303030;
+}
+#invitation-block {
+    padding: 75px 25px;
+    width: 600px;
+    margin: auto;
+    text-align: center;
+}
+h2 {
+    color: #70849C;
+    font-size: 7em;
+    font-weight: 300;
+    line-height: 1.5;
+}
+#invitation-section p {
+    color: #8E8E8F;
+}
+#invitation-section p#subtitle {
+    color: #FFFFFF;
+    font-size: 1.5em;
+    margin: 25px;
+}
+#email-form {
+    margin: 35px 0;
+}
+input {
+    height: 15px;
+    padding: 30px;
+    border: 0;
+    margin: 0;
+    font-size: 1.5em;
+}
+input[type="email"] {
+    width: 350px;
+    background-color: #E6E1CE;
+    color: #303030;
+}
+input[type="email"]:focus {
+    background-color: #FFFFFF !important;
+}
+input[type="submit"] {
+    height: 75px;
+    width: 75px;
+    background-color: #C2473F;
+    color: #FFFFFF;
+    padding: 5px;
+    margin-left: -5px;
+}
+
+/* TEAM SECTION */
+#team-section {
+    background-color: #C2473F;
+    text-align: center;""
+    font-weight: 300;
+    padding-bottom: 75px;
+}
+#team-section p {
+    color: #FFFFFF;
+}
+h4 {
+    font-size: 2.2em;
+    line-height: 1.5;
+    color: #FFFFFF;
+    font-weight: 300;
+    margin: 15px 0;
+}
+#members {
+    margin: 45px -40px;
+}
+#members > div {
+    width: 155px;
+    float: left;
+}
+#members img {
+    text-align: center;
+    width: 115px;
+    height: 115px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    /*background: url('http://placekitten.com/125/120') no-repeat;*/
+}
