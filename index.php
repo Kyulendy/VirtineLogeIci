@@ -1,6 +1,4 @@
 <?php
-$email = $_POST["email"];
-
 // Connection to DB Server
 $conn = mysqli_connect("localhost","root","","mydb");
 // Check
@@ -8,23 +6,31 @@ if (!$conn){
     echo "Connection to database failed";
 //    exit();
 }
-$query = "SELECT email FROM invite_emails WHERE email = '".$email."'";
-$result = mysqli_query($conn,$query);
-$row = mysqli_fetch_array($result,MYSQLI_NUM);
-$n = mysqli_affected_rows($conn);
 
+$email = "";
 $result = "";
-if ($n >= 1) {
-    $result = "Votre email est déjà dans la bse des données";
-} else {
-    if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
-        $result = "Veuillez entrer un email valide";
-    } else {
-        $insert = "INSERT INTO invite_emails (email, date) VALUES ('$email', NOW())";
-        mysqli_query($conn,$insert);
-        $result = "Email " . $email . " à été ajouté avec succès";
+if (isset($_POST["email"])) {
+    $email = $_POST["email"];
+
+    $query = "SELECT email FROM invite_emails WHERE email = '".$email."'";
+    $result = mysqli_query($conn,$query);
+    $row = mysqli_fetch_array($result,MYSQLI_NUM);
+    $n = mysqli_affected_rows($conn);
+
+    $result = "";
+    if ($n >= 1) {
+        $result = "Votre email est déjà dans la base des données";
+    } else if (!empty($email)){
+        if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+            $result = "Veuillez entrer un email valide";
+        } else {
+            $insert = "INSERT INTO invite_emails (email, date) VALUES ('$email', NOW())";
+            mysqli_query($conn,$insert);
+            $result = "Email " . $email . " à été ajouté avec succès";
+        }
     }
 }
+
 mysqli_close($conn);
 
 ?>
@@ -37,6 +43,7 @@ mysqli_close($conn);
     <link rel="stylesheet" href="reset.css" type="text/css" media="screen" />
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+    <link rel="icon" href="favicon.ico" />
 </head>
 <body>
 <div id="top-section" class="section">
