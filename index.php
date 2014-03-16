@@ -63,7 +63,7 @@ mysqli_close($conn);
             Nous avons donc décidé de vous proposer une solution afin
             <br/>et de vous offrir l’opportunité de trouver un logement dans
             <br/>le quartier de votre choix de façon simple et efficace.</p>
-        <hr id="line">
+<!--        <hr id="line">-->
     </div>
 </div>
 <div id="points-section" class="section">

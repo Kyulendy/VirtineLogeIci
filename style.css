@@ -83,9 +83,14 @@ h1 {
 }
 /** Placeholder */
 #buildings {
-    height: 85px;
+    height: 450px;
     background-color: #53616E;
     padding: 40px;
+    background: url('images/paris-roof.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 #chevron {
     position: relative;
@@ -186,12 +191,18 @@ h3 {
 }
 #first-oval {
     background-color: #70849C;
+    background: url('images/pin.png') no-repeat center center;
+    background-size: 50%;
 }
 #second-oval {
     background-color: #53616E;
+    background: url('images/slider.png') no-repeat center center;
+    background-size: 50%;
 }
 #third-oval {
     background-color: #C2473F;
+    background: url('images/letter.png') no-repeat center center;
+    background-size: 50%;
 }
 
 /* INVITATION SECTION */
