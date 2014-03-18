@@ -52,11 +52,16 @@ mysqli_close($conn);
         <div id="logo" class="center">
             <h1>Loge ici</h1>
             <p id="subtitle">et pas ailleurs</p>
+            <p>Avec Loge’ici, je trouve mon logement où je le veux</p>
         </div>
     </div>
 </div>
 <div id="buildings">
-    <!--    <div id="chevron" class="center"></div>-->
+    <div class="content">
+
+        <!--            <div id="chevron" class="center"></div>-->
+        <a href='#invitation-block'><button>Ça m’intéresse!</button></a>
+    </div>
 </div>
 
 <div id="tagline-section" class="section">
@@ -69,10 +74,10 @@ mysqli_close($conn);
         <p class="tagline bold">
             Nous savons combien il n’est jamais évident de trouver un logement où on le veut.
             <br/>Selon nous, tout devrait rester simple et agréable à utiliser.
-            <br/>C’est pourquoi nous avons imaginé une nouvelle façon de rechercher un bien, pour répondre à vos réels besoins.
-            <br/>Nous avons donc décidé de vous proposer une solution afin
+            <br/>C’est pourquoi nous avons imaginé une nouvelle façon de rechercher un bien,
+            <br/>pour répondre à vos réels besoins.
         </p>
-<!--        <hr id="line">-->
+        <!--        <hr id="line">-->
     </div>
 </div>
 <div id="points-section" class="section">
@@ -114,7 +119,7 @@ mysqli_close($conn);
     <div class="content">
         <div id="invitation-block">
             <h2>Invitation</h2>
-            <p id="subtitle">Ca m’intéresse !</p>
+            <p id="subtitle">Ça m’intéresse !</p>
             <p>
                 Recevez une notification pour tester
                 <br/>notre plateforme dès sa sortie
