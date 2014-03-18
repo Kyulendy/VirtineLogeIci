@@ -19,14 +19,14 @@ if (isset($_POST["email"])) {
 
     $result = "";
     if ($n >= 1) {
-        $result = "Votre email est déjà dans la base des données";
+        $result = "Votre email est déjà dans la base des données. Vous serez notifié dès la sortie de notre solution.";
     } else if (!empty($email)){
         if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
             $result = "Veuillez entrer un email valide";
         } else {
             $insert = "INSERT INTO invite_emails (email, date) VALUES ('$email', NOW())";
             mysqli_query($conn,$insert);
-            $result = "Email " . $email . " à été ajouté avec succès";
+            $result = "Votre email " . $email . " à été ajouté avec succès!";
         }
     }
 }
@@ -67,9 +67,11 @@ mysqli_close($conn);
             <br/> mais ne répondant pas toujours à nos besoins ?
         </p>
         <p class="tagline bold">
-            Nous avons donc décidé de vous proposer une solution afin
-            <br/>et de vous offrir l’opportunité de trouver un logement dans
-            <br/>le quartier de votre choix de façon simple et efficace.</p>
+            Nous savons combien il n’est jamais évident de trouver un logement où on le veut.
+            <br/>Selon nous, tout devrait rester simple et agréable à utiliser.
+            <br/>C’est pourquoi nous avons imaginé une nouvelle façon de rechercher un bien, pour répondre à vos réels besoins.
+            <br/>Nous avons donc décidé de vous proposer une solution afin
+        </p>
 <!--        <hr id="line">-->
     </div>
 </div>
@@ -80,15 +82,15 @@ mysqli_close($conn);
                 <div id="first-oval" class="oval"></div>
             </div>
             <div>
-                <h3>Un système de recherche optimisé</h3>
-                <p>Visualisez exactement où ce situe le logement souhaité en fonction de votre lieu de travail, cercle d’amis... et prenez connaissance de la vie du quartier.</p>
+                <h3>Où je veux</h3>
+                <p>Un quartier en particulier, pas loin des copains, proche du métro ou du boulot!</p>
             </div>
         </div>
         <div class="clear"></div>
         <div class="point point-text-left">
             <div>
-                <h3>Des résultats de recherche plus lisibles</h3>
-                <p>Sélectionnez et comparez uniquement les annonces qui vous intéressent et masquer celles qui ne le sont pas. Terminés les résultats noyés dans la masse.</p>
+                <h3>Comme je veux</h3>
+                <p>Des résultats selon mes besoins, mes offres préférées toujours sous la main… et tout ça sans créer de compte!</p>
             </div>
             <div>
                 <div id="second-oval" class="oval"></div>
@@ -101,8 +103,8 @@ mysqli_close($conn);
                 <div class="clear"></div>
             </div>
             <div>
-                <h3>Une candidature en 1 clic !</h3>
-                <p>En un clic, mettez vos chances de votre côté et laissez votre candidature au propriétaire. Celui-ci prendra directement contact avec vous si votre profil l'intéresse.</p>
+                <h3>En quelques clics</h3>
+                <p>Fini les intermédiaires, je dépose ma candidature et je prends directement contact avec le propriétaire!</p>
             </div>
         </div>
         <div class="clear"></div>
@@ -112,16 +114,16 @@ mysqli_close($conn);
     <div class="content">
         <div id="invitation-block">
             <h2>Invitation</h2>
-            <p id="subtitle">Vous avez hâte de découvrir Loge'ici ?</p>
+            <p id="subtitle">Ca m’intéresse !</p>
             <p>
-                Recevez votre invitation et ayez ainsi le privilège de
-                <br/>tester en avant-première notre plateforme.
+                Recevez une notification pour tester
+                <br/>notre plateforme dès sa sortie
             </p>
 
             <div id="email-form">
                 <form name="subscribe" action="#invitation-block" method="GET">
-                    <input type="email" placeholder="Votre email" name="email">
-                    <input type="submit" value="Go">
+                    <input type="email" placeholder="Mon e-mail..." name="email">
+                    <input type="submit" value="M’avertir">
                 </form>
             </div>
 
