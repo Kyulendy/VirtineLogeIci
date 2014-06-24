@@ -3,7 +3,7 @@
 $conn = mysqli_connect("localhost","root","","mydb");
 // Check
 if (!$conn){
-    echo "Connection to database failed";
+//    echo "Connection to database failed";
 //    exit();
 }
 
@@ -41,99 +41,138 @@ mysqli_close($conn);
     <meta charset="utf-8"/>
     <title>Loge ici</title>
     <link rel="stylesheet" href="reset.css" type="text/css" media="screen" />
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
     <link rel="icon" href="favicon.ico" />
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+        $('html,body').animate({
+        scrollTop: target.offset().top
+        }, 1000);
+        return false;
+        }
+        }
+        });
+        });
+    </script>
 </head>
 <body>
+
+<div id="clouds"></div>
+
 <div id="top-section" class="section">
     <div class="content">
-        <div id="drop" class="center"></div>
-        <div id="logo" class="center">
-            <h1>Loge ici</h1>
-            <p id="subtitle">et pas ailleurs</p>
-            <p>Avec Loge’ici, je trouve mon logement où je le veux</p>
+        <img id="logo-img" src="./images/logo.png" alt="Loge ici logo">
+    </div>
+
+    <div id="buildings">
+        <div class="content">
+            <div id="tagline" class="center">
+                <h1>Je trouve mon logement où je le veux</h1>
+                <h1>Pas ailleurs.</h1>
+                <a href='#invitation-block'>
+                    <button>Ça m’intéresse!</button>
+                </a>
+            </div>
         </div>
     </div>
 </div>
-<div id="buildings">
-    <div class="content">
 
-        <!--            <div id="chevron" class="center"></div>-->
-        <a href='#invitation-block'><button>Ça m’intéresse!</button></a>
+<div id="scroll-section">
+    <div class="content no-padding">
+        <a href='#tagline-section'>
+            <img class="center" src="./images/arrow_white.png" alt="down arrow sign">
+        </a>
     </div>
 </div>
 
-<div id="tagline-section" class="section">
+<div id="tagline-section" class="">
     <div class="content">
-        <p class="tagline">
-            Combien de fois avons-nous eu l’occasion de visiter des dizaines de sites de
-            <br/>recherche immobilière, regorgés de divers fonctionnalités
-            <br/> mais ne répondant pas toujours à nos besoins ?
-        </p>
-        <p class="tagline bold">
-            Nous savons combien il n’est jamais évident de trouver un logement où on le veut.
-            <br/>Selon nous, tout devrait rester simple et agréable à utiliser.
-            <br/>C’est pourquoi nous avons imaginé une nouvelle façon de rechercher un bien,
-            <br/>pour répondre à vos réels besoins.
-        </p>
-        <!--        <hr id="line">-->
+        <h4>
+            Trouver son logement là ou on le veut n'est pas toujours chose facile...
+            <br/>Voici une nouvelle façon de rechercher son chez-soi, simple et agréable.
+        </h4>
     </div>
 </div>
 <div id="points-section" class="section">
     <div class="content">
-        <div class="point point-text-right">
-            <div>
-                <div id="first-oval" class="oval"></div>
-            </div>
+        <div class="column">
             <div>
                 <h3>Où je veux</h3>
-                <p>Un quartier en particulier, pas loin des copains, proche du métro ou du boulot!</p>
+                <p>
+                    Pas loin des copains, proche du métro ou du boulot, un quartier en particulier...
+                    <br/>Je suis à proximité !
+                </p>
+            </div>
+            <div>
+                <img src="./images/column_map.png" alt="">
             </div>
         </div>
-        <div class="clear"></div>
-        <div class="point point-text-left">
+        <div class="column">
+            <div>
+                <img src="./images/column_windows.png" alt="">
+            </div>
             <div>
                 <h3>Comme je veux</h3>
-                <p>Des résultats selon mes besoins, mes offres préférées toujours sous la main… et tout ça sans créer de compte!</p>
-            </div>
-            <div>
-                <div id="second-oval" class="oval"></div>
+                <p>
+                    Des résultats selon mes besoins
+                    <br/> et mes offres préférées toujours sous la main.
+                    Tout ça sans créer de compte !
+                </p>
             </div>
         </div>
-        <div class="clear"></div>
-        <div class="point point-text-right">
-            <div>
-                <div id="third-oval" class="oval"></div>
-                <div class="clear"></div>
-            </div>
+        <div class="column last-column">
             <div>
                 <h3>En quelques clics</h3>
-                <p>Fini les intermédiaires, je dépose ma candidature et je prends directement contact avec le propriétaire!</p>
+                <p>
+                    Fini les intermédiaires,
+                    <br/>je dépose ma candidature et je prends
+                    <br/>directement contact avec le propriétaire
+                </p>
+            </div>
+            <div>
+                <img src="./images/column_paper-plane.png" alt="">
             </div>
         </div>
         <div class="clear"></div>
     </div>
+
+    <div class="content no-padding">
+        <a href='#invitation-section'>
+            <img class="center" src="./images/arrow_red.png" alt="down arrow sign">
+        </a>
+    </div>
 </div>
 <div id="invitation-section" class="section">
-    <div class="content">
+    <div class="content no-padding">
         <div id="invitation-block">
-            <h2>Invitation</h2>
-            <p id="subtitle">Ça m’intéresse !</p>
-            <p>
-                Recevez une notification pour tester
-                <br/>notre plateforme dès sa sortie
-            </p>
+            <h2>Ça m’intéresse !</h2>
+            <h3>
+                Je veux tester Loge'ici dès sa sortie,
+                <br/><span class="dark">Je m'inscris !</span>
+            </h3>
 
             <div id="email-form">
                 <form name="subscribe" action="#invitation-block" method="GET">
-                    <input type="email" placeholder="Mon e-mail..." name="email">
-                    <input type="submit" value="M’avertir">
+                    <input type="email" placeholder="Adresse e-mail" name="email">
+                    <button type="submit">M’avertir</button>
                 </form>
             </div>
 
-            <p class="tagline bold"><?php echo $result; ?></p>
+            <p>
+                <?php echo $result; ?>
+            </p>
+        </div>
 
+        <div id="lantern">
+            <img src="images/lantern.png">
         </div>
     </div>
 </div>
