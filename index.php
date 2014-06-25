@@ -85,7 +85,7 @@ mysqli_close($conn);
     </div>
 </div>
 
-<div id="scroll-section">
+<div class="scroll-section orange">
     <div class="content no-padding">
         <a href='#tagline-section'>
             <img class="center" src="./images/arrow_white.png" alt="down arrow sign">
@@ -93,7 +93,7 @@ mysqli_close($conn);
     </div>
 </div>
 
-<div id="tagline-section" class="">
+<div id="tagline-section">
     <div class="content">
         <h4>
             Trouver son logement là ou on le veut n'est pas toujours chose facile...
@@ -101,6 +101,7 @@ mysqli_close($conn);
         </h4>
     </div>
 </div>
+
 <div id="points-section" class="section">
     <div class="content">
         <div class="column">
@@ -159,6 +160,9 @@ mysqli_close($conn);
                 <br/><span class="dark">Je m'inscris !</span>
             </h3>
 
+            </br>
+            <p id="result"><?php echo $result; ?></p>
+
             <div id="email-form">
                 <form name="subscribe" action="#invitation-block" method="GET">
                     <input type="email" placeholder="Adresse e-mail" name="email">
@@ -166,9 +170,6 @@ mysqli_close($conn);
                 </form>
             </div>
 
-            <p>
-                <?php echo $result; ?>
-            </p>
         </div>
 
         <div id="lantern">
@@ -176,56 +177,71 @@ mysqli_close($conn);
         </div>
     </div>
 </div>
+
+<div class="scroll-section grey">
+    <div class="content no-padding">
+        <a href='#team-section'>
+            <img class="center" src="./images/arrow_white.png" alt="down arrow sign">
+        </a>
+    </div>
+</div>
+
 <div id="team-section" class="section">
     <div class="content">
-        <img class="center" alt="Exclusive Diversity" src="./images/ed_logo.png"/>
-        <h4>We are Exclusive Diversity</h4>
-        <p>Créer en 2013 au sein d’une école du web, cette passion nous a réuni naturellement de part notre envie
-            <br/>commune de bousculer les standards présent sur le web. Ayant des compétences très diverses,
-            <br/>complémentarité et notre esprit d’équipe nous permettent de travailler sur des projets
-            <br/>d’envergure et atteindre les différents objectifs que nous nous fixerons.</p>
+        <img class="center" alt="Exclusive Diversity" id="id_logo" src="./images/ed_logo.png"/>
+        <p id="story">
+            Créer en 2013 au sein d’une école de l'Internet, nous partageons passion du web
+            <br/> et volonté de bousculer actuels de recherche immobilière en ligne.
+            <br/>Melting Pot de compétences diverses, nous sommes l'équipe derrière Loge'ici.
+        </p>
         <br/>
-        <p class="bold">« La diversité unit dans un projet commun »</p>
         <div id="members">
             <div>
-                <img src="./images/members/david.png">
+                <div class="image david"></div>
                 <p>David Tang</p>
                 <p class="light">Chef de Projet</p>
             </div>
             <div>
-                <img src="./images/members/jonas.png">
+                <div class="image jonas"></div>
                 <p>Jonas Loco</p>
                 <p class="light">Responsable Com'</p>
             </div>
             <div>
-                <img src="./images/members/brian.png">
+                <div class="image brian"></div>
                 <p>Brian Marciano</p>
                 <p class="light">Responsable Marketing</p>
             </div>
             <div>
-                <img src="./images/members/samuel.png">
+                <div class="image samuel"></div>
                 <p>Samuel Bodin</p>
                 <p class="light">Lead Developer</p>
             </div>
             <div>
-                <img src="./images/members/ekaterina.png">
+                <div class="image ekaterina"></div>
                 <p>Ekaterina Johnston</p>
                 <p class="light">Développeur</p>
             </div>
             <div>
-                <img src="./images/members/josue.png">
+                <div class="image josue"></div>
                 <p>Josué Studer</p>
                 <p class="light">Directeur Artistique</p>
             </div>
-            <div>
-                <img src="./images/members/sebastien.png">
+            <div class="last">
+                <div class="image sebastien"></div>
                 <p>Sébastien Tsing</p>
                 <p class="light">Web Designer</p>
             </div>
         </div>
         <div class="clear"></div>
     </div>
+
+    </br>
+
+    <div class="content no-padding">
+        <a href='#top-section'>
+            <img class="center" src="./images/arrow_up_grey.png" alt="up arrow sign">
+        </a>
+    </div>
 </div>
-<div class="teardrop"></div>
 </body>
 </html>
