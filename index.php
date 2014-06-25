@@ -87,9 +87,11 @@ mysqli_close($conn);
 
 <div class="scroll-section orange">
     <div class="content no-padding">
-        <a href='#tagline-section'>
-            <img class="center" src="./images/arrow_white.png" alt="down arrow sign">
-        </a>
+<!--        <div id="panorama_bottom">-->
+            <a href='#tagline-section'>
+                <img class="center" src="./images/arrow_white.png" alt="down arrow sign">
+            </a>
+<!--        </div>-->
     </div>
 </div>
 

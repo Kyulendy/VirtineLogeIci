@@ -103,7 +103,12 @@ h1 {
     padding-top: 50px;
 }
 .orange {
-    background-color: #E8563D;
+    background-color: #E8563D !important;
+    background: url('images/panorama_bottom.png') no-repeat top center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 .grey {
     background-color: #A6A6A6;
