@@ -65,7 +65,7 @@ mysqli_close($conn);
 </head>
 <body>
 
-<div id="clouds"></div>
+<div class="clouds"></div>
 
 <div id="top-section" class="section">
     <div class="content">
@@ -151,7 +151,11 @@ mysqli_close($conn);
         </a>
     </div>
 </div>
+
+
 <div id="invitation-section" class="section">
+    <div class="clouds no-margin-top"></div>
+
     <div class="content no-padding">
         <div id="invitation-block">
             <h2>Ça m’intéresse !</h2>
