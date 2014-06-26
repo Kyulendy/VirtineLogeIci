@@ -63,7 +63,7 @@ h1 {
     height: 400px;
     text-align: center;
     z-index: 99;
-    margin-top: 140px;
+    margin: 140px auto 0 auto;
 }
 #tagline button {
     margin-top: 100px;
@@ -76,8 +76,8 @@ h1 {
 }
 #buildings {
     position: relative;
-    height: 665px;
-    margin: -50px -50px 0 -50px;
+    max-height: 665px;
+    max-width: 100%;
     background-color: #53616E;
     background: url('images/panorama.png') no-repeat top center;
     -webkit-background-size: cover;
@@ -88,7 +88,8 @@ h1 {
 .clouds {
     position: absolute;
     margin-top: 150px;
-    height: 250px;
+    height: 75%;
+    min-height: 250px;
     width: 100%;
     background-color: #FFFFFF;
     background: url('images/clouds.png') no-repeat top left;

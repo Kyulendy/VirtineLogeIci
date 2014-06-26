@@ -210,7 +210,7 @@ mysqli_close($conn);
             <div>
                 <div class="image jonas"></div>
                 <p>Jonas Loco</p>
-                <p class="light">Responsable Com'</p>
+                <p class="light">Chef de produit</p>
             </div>
             <div>
                 <div class="image brian"></div>
@@ -235,7 +235,7 @@ mysqli_close($conn);
             <div class="last">
                 <div class="image sebastien"></div>
                 <p>Sébastien Tsing</p>
-                <p class="light">Web Designer</p>
+                <p class="light">Concept designer</p>
             </div>
         </div>
         <div class="clear"></div>
