@@ -1,6 +1,6 @@
 <?php
 // Connection to DB Server
-$conn = mysqli_connect("localhost","root","","mydb");
+$conn = mysqli_connect("localhost","root","root","vitrinelogeici");
 // Check
 if (!$conn){
 //    echo "Connection to database failed";
@@ -12,7 +12,7 @@ $result = "";
 if (isset($_POST["email"])) {
     $email = $_POST["email"];
 
-    $query = "SELECT email FROM invite_emails WHERE email = '".$email."'";
+    $query = "SELECT email FROM invite_emails WHERE email = '". mysqli_real_escape_string($email)."'";
     $result = mysqli_query($conn,$query);
     $row = mysqli_fetch_array($result,MYSQLI_NUM);
     $n = mysqli_affected_rows($conn);
@@ -24,9 +24,9 @@ if (isset($_POST["email"])) {
         if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
             $result = "Veuillez entrer un email valide";
         } else {
-            $insert = "INSERT INTO invite_emails (email, date) VALUES ('$email', NOW())";
+            $insert = "INSERT INTO invite_emails (email, date) VALUES ('msqli_real_escape_string($email)', NOW())";
             mysqli_query($conn,$insert);
-            $result = "Votre email " . $email . " à été ajouté avec succès!";
+            $result = "Votre email " . htmlentities($email) . " à été ajouté avec succès!";
         }
     }
 }
@@ -170,7 +170,7 @@ mysqli_close($conn);
             <p id="result"><?php echo $result; ?></p>
 
             <div id="email-form">
-                <form name="subscribe" action="#invitation-block" method="GET">
+                <form name="subscribe" action="http://loge-ici.fr/#invitation-block" method="POST">
                     <input type="email" placeholder="Adresse e-mail" name="email">
                     <button type="submit">M’avertir</button>
                 </form>
